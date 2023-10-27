@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Plansza_1 = __importDefault(require("./Klasy/Plansza"));
+const plansza = new Plansza_1.default("plansza");
+var tablica = [['0']];
+let podglad;
+podglad = document.getElementById("podglad");
+let obrot;
+obrot = document.getElementById("obrot");
+let tab;
+tab = document.getElementById("tab");
+let div;
+div = document.getElementById("main");
+let p;
+p = document.getElementById("punkty");
+tablica = plansza.PustaPlansza(tab, tablica, plansza, podglad, obrot, p);
+plansza.Wylosuj();
+plansza.Runda(tablica, 0);
